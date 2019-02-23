@@ -1,2 +1,6 @@
-rootProject.name = 'com.kilopo.vape'
-
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'vape'
