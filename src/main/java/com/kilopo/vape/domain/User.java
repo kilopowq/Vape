@@ -1,9 +1,9 @@
 package com.kilopo.vape.domain;
 
-        import org.springframework.lang.NonNull;
+import org.springframework.lang.NonNull;
 
-        import javax.persistence.Entity;
-        import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")

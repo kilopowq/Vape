@@ -17,17 +17,27 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter',
     'org.springframework.boot:spring-boot-starter-web',
-    'org.springframework.boot:spring-boot-starter-data-jpa',
-    'org.springframework.boot:spring-boot-starter-thymeleaf'
+    'org.springframework.boot:spring-boot-starter-thymeleaf',
+    'org.springframework.boot:spring-boot-starter-security',
+    'org.springframework.boot:spring-boot-configuration-processor',
+    'io.jsonwebtoken:jjwt:0.7.0',
+    'com.google.guava:guava:22.0',
+
+    //This is temporary to support login page
+    'org.springframework.boot:spring-boot-starter-thymeleaf',
+    'org.webjars:jquery:3.2.1',
+    'org.webjars:lodash:4.17.4',
+    'org.webjars:bootstrap:3.3.7',
+    'org.webjars.npm:github-com-auth0-jwt-decode:2.1.0',
+    'org.webjars:clipboard.js:1.7.1',
+    'org.webjars:momentjs:2.18.1'
 }
 
 
 dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.1.RELEASE'
-
     compile group: 'org.flywaydb', name: 'flyway-core', version: '5.2.4'
-    
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
