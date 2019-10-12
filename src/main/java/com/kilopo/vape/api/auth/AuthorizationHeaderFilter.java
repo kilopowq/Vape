@@ -25,7 +25,7 @@ public class AuthorizationHeaderFilter extends OncePerRequestFilter {
     }
 
     private Optional<String> parseHeader(final String rawHeader) {
-        if(rawHeader == null || !rawHeader.startsWith("Bearer "))
+        if (rawHeader == null || !rawHeader.startsWith("Bearer "))
             return Optional.empty();
 
         return Optional.of(rawHeader.substring(7));

@@ -20,8 +20,10 @@ dependencies {
     'org.springframework.boot:spring-boot-starter-thymeleaf',
     'org.springframework.boot:spring-boot-starter-security',
     'org.springframework.boot:spring-boot-configuration-processor',
+    'org.springframework.boot:spring-boot-starter-data-rest',
     'io.jsonwebtoken:jjwt:0.7.0',
     'com.google.guava:guava:22.0',
+    'com.diffplug.durian:durian:3.4.0',
 
     //This is temporary to support login page
     'org.springframework.boot:spring-boot-starter-thymeleaf',
