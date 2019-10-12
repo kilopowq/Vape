@@ -1,17 +1,18 @@
 package com.kilopo.vape.domain;
 
-import org.springframework.lang.NonNull;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "users")
-public class User extends BaseDomain {
+@Table(name = "product")
+public class Product extends BaseDomain {
 
     private String name;
 
-    @NonNull
+    @Column
+    @NotNull
     public String getName() {
         return name;
     }

@@ -26,7 +26,7 @@ public class JwtAuthenticationProvider implements AuthenticationProvider {
         final RawHeaderAuthToken rawToken = (RawHeaderAuthToken) authentication;
 
         try {
-                return tokenFactory.create(rawToken.getCredentials());
+            return tokenFactory.create(rawToken.getCredentials());
         } catch (ExpiredJwtException e) {
             logger.debug("JWT exception occurred:", e);
             throw new NonceExpiredException(e.getMessage(), e);

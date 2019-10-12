@@ -1,19 +1,22 @@
 package com.kilopo.vape.domain;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public class BaseDomain {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    public long id;
+    public Long id;
 
-    public long getId() {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

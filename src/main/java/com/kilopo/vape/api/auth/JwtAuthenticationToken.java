@@ -45,7 +45,7 @@ public class JwtAuthenticationToken extends AbstractAuthenticationToken {
                 .map(role -> {
                     Assert.isTrue(!role.startsWith("ROLE_"), role
                             + " cannot start with ROLE_ (it is automatically added)");
-                    return new SimpleGrantedAuthority("ROLE_"+role);
+                    return new SimpleGrantedAuthority("ROLE_" + role);
                 })
                 .collect(toImmutableList());
     }
@@ -61,8 +61,7 @@ public class JwtAuthenticationToken extends AbstractAuthenticationToken {
         JwtAuthenticationToken create(String jwtToken) {
             final Claims claims = jwtParser.parseClaimsJws(jwtToken).getBody();
 
-            @SuppressWarnings("unchecked")
-            final List<String> roles = Optional.ofNullable((List<String>)claims.get("roles", List.class))
+            @SuppressWarnings("unchecked") final List<String> roles = Optional.ofNullable((List<String>) claims.get("roles", List.class))
                     .orElse(ImmutableList.of())
                     .stream()
                     .map(String::toUpperCase)
