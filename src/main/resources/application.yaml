@@ -1,0 +1,19 @@
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    url : jdbc:postgresql://localhost:5432/vapedb
+    username : postgres
+    password : postgres
+
+  jpa:
+    properties.hibernate:
+      dialect : org.hibernate.dialect.PostgreSQL82Dialect
+      jdbc.lob.non_contextual_creation: true
+
+    hibernate.ddl-auto : validate
+
+  flyway.locations=classpath: db/migration
+
+login.authorize-url: http://localhost:9443/auth/realms/vape/protocol/openid-connect/auth
+login.client-id: login-app
+identity-server.public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAindOWkwgb1L7ev70bLLkUIJ5U3dQRBeFhl/GHZCXCu+0E/krVt+97Hqk97okkhto1747NrTJ66002ePa5DRBR4/p4DbSOZNCKri1u5VzKheDj/hOY8GfVpAdPHvf4LtbMAm3xphdD/m9OhAxKQJOxEBliu/QRD+18h2UgMmmq2pHPUIyhJdmwdevvUIsND1RRkNQYmgzGnVfm42L9V9XUdllM8gidsC0yfyY0ZKawHlQ5Dp7TR4LTx6eAY4OB01Fe5AEvGE+pin23uxr25z3bDNnDZOmJF0nbYAVQYNqDLY1MVKnqYF/fcK5Ctj4sNJBBPf+WK8rEk+Jcgk7r5fMDQIDAQAB

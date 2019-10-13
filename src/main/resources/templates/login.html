@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <style>
+        body {
+            padding: 20px;
+        }
+        pre {
+            margin-bottom: 0;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    Authorization Header:
+    <pre><code id="token"></code></pre>
+    Expires <span id="token-expires"></span><br />
+    <button id="copy-to-clipboard"
+            data-clipboard-target="#token"
+            class="btn btn-default">
+        Copy to clipboard
+    </button>
+    <button id="refresh-token" class="btn btn-default">Refresh</button>
+</section>
+<section>
+    Decrypted Token:<br />
+    <pre><code id="token-contents"></code></pre>
+</section>
+
+<script src="/webjars/github-com-auth0-jwt-decode/2.1.0/jwt-decode.min.js"></script>
+<script src="/webjars/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="/webjars/momentjs/2.18.1/min/moment.min.js"></script>
+
+<script src="http://cdn.jsdelivr.net/webjars/jquery/3.2.1/jquery.min.js"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+<script src="http://cdn.jsdelivr.net/webjars/lodash/4.17.4/lodash.min.js"
+        th:src="@{/webjars/lodash/4.17.4/lodash.min.js}"></script>
+
+
+<script src="/static/js/config.js"
+        th:src="@{/js/config.js}"></script>
+<script src="/static/js/script.js"
+        th:src="@{/js/script.js}"></script>
+
+<script>
+    $(document).ready(() => (new LoginApp()).run());
+</script>
+</body>
+</html>
