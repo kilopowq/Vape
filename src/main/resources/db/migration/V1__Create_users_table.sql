@@ -1,4 +1,4 @@
-create table users (
+CREATE TABLE users (
     id BIGSERIAL PRIMARY KEY,
     name VARCHAR(30) NOT NULL
 );

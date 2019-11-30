@@ -6,16 +6,15 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "product")
-public class Product extends BaseDomain {
-
+@Table(name = "warehouse")
+public class Warehouse extends BaseDomain {
     private String name;
 
-    public Product(String name) {
+    public Warehouse(String name) {
         this.name = name;
     }
 
-    public Product() {
+    public Warehouse() {
     }
 
     @Column(unique = true)
