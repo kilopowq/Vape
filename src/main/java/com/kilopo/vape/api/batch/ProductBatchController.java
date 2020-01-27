@@ -1,9 +1,9 @@
-package com.kilopo.vape.api;
+package com.kilopo.vape.api.batch;
 
 import com.kilopo.vape.api.util.ResourcesUtil;
 import com.kilopo.vape.domain.Mutation;
 import com.kilopo.vape.domain.Product;
-import com.kilopo.vape.service.ProductServiceImpl;
+import com.kilopo.vape.service.impl.ProductServiceImpl;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.hateoas.Resources;
 import org.springframework.web.bind.annotation.PostMapping;

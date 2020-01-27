@@ -39,7 +39,7 @@ public class PgConstraintRepository {
     private static Row rowMapper(Map<String, Object> row) throws SQLException {
         String tableName = (String) row.get("table_name");
         String constraintName = (String) row.get("constraint_name");
-        Array arr = (Array) row.get("columns");
+        Array arr = (Array) row.get("columnsname");
         Set<String> columns = ImmutableSet.copyOf((String[]) arr.getArray());
         ConstraintType type = ConstraintType.rawToType((String) row.get("contype"));
         return new Row(tableName, new Constraint(constraintName, columns, type));
